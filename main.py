@@ -13,3 +13,6 @@ print('Je hebt 5 beurten! Het woord is', len(word), 'letters lang')
 
 guess = input ('Raad een letter! Of raad het woord als je het al weet!')
 #vraagt om input speler 
+
+turns = 5 
+#zorgt dat er max. 5 beurten zijn
