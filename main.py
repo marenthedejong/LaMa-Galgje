@@ -5,4 +5,5 @@ words= ['informatica', 'informatiekunde', 'spelletje', 'aardigheidje', 'scholier
 #alle woorden waar de computer uit kan kiezen
 
 
-
+word = random.choice(words)  
+#definieert wat de variabele 'word' is
