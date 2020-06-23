@@ -8,5 +8,8 @@ words= ['informatica', 'informatiekunde', 'spelletje', 'aardigheidje', 'scholier
 word = random.choice(words)  
 #definieert wat de variabele 'word' is
 
+print('Je hebt 5 beurten! Het woord is', len(word), 'letters lang')
+#geeft weer hoe lang het woord is
+
 guess = input ('Raad een letter! Of raad het woord als je het al weet!')
 #vraagt om input speler 
