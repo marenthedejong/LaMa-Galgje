@@ -7,3 +7,6 @@ words= ['informatica', 'informatiekunde', 'spelletje', 'aardigheidje', 'scholier
 
 word = random.choice(words)  
 #definieert wat de variabele 'word' is
+
+guess = input ('Raad een letter! Of raad het woord als je het al weet!')
+#vraagt om input speler 
