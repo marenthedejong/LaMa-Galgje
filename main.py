@@ -19,7 +19,7 @@ while turns > 0:
      #wat er gebeurt als er nog beurten zijn 
      
     failed = 0 
-      
+    #aantal keer dat er fouten worden gemaakt
     
     for letter in word:  
           
@@ -30,19 +30,30 @@ while turns > 0:
         else:  
             print("_") 
            #laat aantal letters zien en de goed geraden letter op de juiste plek 
-            
+            failed +=1
+           #het aantal fouten neemt met 1 toe
+
+
+    if failed == 0: 
+        
+        print('Je hebt gewonnen, gefeliciteerd!')  
+      
+        print("Het woord is: ", word)  
+        break #zorgt ervoor dat de loop stopt als je wint
+        #hele stuk is wat er gebeurt als je wint
+
 
     guess = input ('Raad een letter! Of raad het woord als je  het al weet!')
     #vraagt om input speler
 
     guesses += guess  
     #laat de computer onthouden welke letters al zijn geraden
-
-     
+      
+  
     if guess not in word: 
           
         turns -= 1
-          
+         #aantal beurten neemt met 1 af 
        
         print("FOUT") 
           
@@ -53,6 +64,14 @@ while turns > 0:
             print('Je hebt verloren, jammer joh!') 
             print("Het woord is: ", word)
             #verliesbericht voor als beurten op zijn
+
+
+    
+            
+    
+
+    
+      
    
       
    
