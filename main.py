@@ -10,20 +10,41 @@ word = random.choice(words)
 print('Je hebt 5 beurten! Het woord is', len(word), 'letters lang')
 #geeft weer hoe lang het woord is
 
-guess = input ('Raad een letter! Of raad het woord als je het al weet!')
-#vraagt om input speler 
-
 guesses =''
 
 turns = 5 
 #zorgt dat er max. 5 beurten zijn
 
-for letter in word:  
+while turns > 0: 
+     #wat er gebeurt als er nog beurten zijn 
+     
+    failed = 0 
+      
+    
+    for letter in word:  
           
-  if letter in guesses:  
-    print(letter) 
+        
+        if letter in guesses:  
+            print(letter) 
+              
+        else:  
+            print("_") 
+           #laat aantal letters zien en de goed geraden letter op de juiste plek 
+            
+
+    guess = input ('Raad een letter! Of raad het woord als je  het al weet!')
+    #vraagt om input speler
+
+    guesses += guess  
+    #laat de computer onthouden welke letters al zijn geraden
+
+   
+      
+   
+     
+          
+          
+       
+
              
-  else:  
-     print("_")
-#laat aantal letters zien en de goed geraden letter op de juiste plek
 
