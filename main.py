@@ -49,6 +49,10 @@ while turns > 0:
        
         print("Je hebt nog maar", + turns, 'beurten!')
         #zorgt dat er een beurt af gaat als de geraden letter niet in het woord zit 
+        if turns == 0: 
+            print('Je hebt verloren, jammer joh!') 
+            print("Het woord is: ", word)
+            #verliesbericht voor als beurten op zijn
    
       
    
