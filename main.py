@@ -38,6 +38,17 @@ while turns > 0:
     guesses += guess  
     #laat de computer onthouden welke letters al zijn geraden
 
+     
+    if guess not in word: 
+          
+        turns -= 1
+          
+       
+        print("FOUT") 
+          
+       
+        print("Je hebt nog maar", + turns, 'beurten!')
+        #zorgt dat er een beurt af gaat als de geraden letter niet in het woord zit 
    
       
    
