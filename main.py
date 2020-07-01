@@ -19,6 +19,9 @@ def galgje():
  turns = 5 
   #zorgt dat er max. 5 beurten zijn
 
+ guessed =[]
+ #lijst met (fout) geraden letters
+
  while turns > 0: 
      #wat er gebeurt als er nog beurten zijn 
      
@@ -56,7 +59,12 @@ def galgje():
         print("FOUT") 
         print("Je hebt nog maar", + turns, 'beurten!')
 
-        
+        guessed.append(guess)
+        guessed.sort()
+        #zorgt ervoor dat de fout geraden letters in een lijst komen die ook op alfabetische volgorde staat
+
+        print('Deze letters zitten niet in het woord:', guessed)
+
         if turns == 0: 
             print('Je hebt verloren, jammer joh!') 
             print("Het woord is: ", word)
