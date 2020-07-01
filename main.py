@@ -39,9 +39,9 @@ def galgje():
     if failed == 0: 
         
         print('Je hebt gewonnen, gefeliciteerd!')  
-      
         print("Het woord is: ", word)  
-        #hele stuk is wat er gebeurt als je wint
+        opnieuw()
+        #winnaarsbericht en vraag opnieuw te spelen
         
     guess = input("Raad een letter:")
     
@@ -60,8 +60,19 @@ def galgje():
         if turns == 0: 
             print('Je hebt verloren, jammer joh!') 
             print("Het woord is: ", word)
+            opnieuw()
             #verliesbericht voor als beurten op zijn
           
+def opnieuw():
+ restart = input("Wil je opieuw spelen?").lower()
+ 
+ if restart == 'ja':
+   galgje()
+ 
+ elif restart == 'nee':
+   print('Bedankt voor het spelen, tot ziens!')
+   exit()
+#functie voor het opnieuw spelen van het spel
 
 galgje()
 #laat het spel beginnen
