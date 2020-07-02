@@ -28,7 +28,7 @@ def galgje():
     failed = 0 
     #aantal keer dat er fouten worden gemaakt
     
-    for letter in word:  
+    for letter in word: 
         
         if letter in guesses:  
             print(letter) 
@@ -57,7 +57,7 @@ def galgje():
     guesses += guess  
     #laat de computer onthouden welke letters al zijn geraden 
 
-    if ( guess not in word and guess.isalpha()):
+    if ( guess not in word and guess.isalpha()and len(guess) ==1):
       #dus dit gebeurt alleen als de letter niet in het woord zit en dus een letter (en geef cijfer is)
 
         turns -= 1
@@ -72,11 +72,18 @@ def galgje():
 
         print('Deze letters zitten niet in het woord:', guessed)
 
-        if turns == 0: 
+    if turns == 0: 
             print('Je hebt verloren, jammer joh!') 
             print("Het woord is: ", word)
             opnieuw()
             #verliesbericht voor als beurten op zijn
+
+    if len(guess) >1 :
+     print('Je mag slechts 1 letter per keer raden!')
+     turns -= 1
+     print("Je hebt nog maar", + turns, 'beurten!')
+     #als de lengte van de invoer langer dan 1 karakter is neemt het aantal beurten met 1 af en wordt er een foutboodschap getoond
+
 
 def opnieuw():
  restart = input("Wil je opieuw spelen?").lower()
