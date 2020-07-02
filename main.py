@@ -11,6 +11,15 @@ def galgje():
 
  print('Welkom bij lama galgje!')
 
+ naam = input("Hoe heet je? ") 
+  #vraagt om naam/input gebruiker
+
+ def printHallo(naam):
+   print('Hallo ' + naam + ', veel succes!')
+   #gepersonaliseerde welkomsboodschap
+
+ printHallo(naam)
+
  print('Je hebt 5 beurten! Het woord is', + len(word), 'letters lang')
  #geeft weer hoe lang het woord is
 
@@ -32,7 +41,7 @@ def galgje():
         
         if letter in guesses:  
             print(letter) 
-              
+        
         else:  
             print("_") 
            #laat aantal letters zien en de goed geraden letter op de juiste plek 
@@ -41,7 +50,7 @@ def galgje():
 
     if failed == 0: 
         
-        print('Je hebt gewonnen, gefeliciteerd!')  
+        print(naam, ', je hebt gewonnen, gefeliciteerd!')  
         print("Het woord is: ", word)  
         opnieuw()
         #winnaarsbericht en vraag opnieuw te spelen
@@ -53,9 +62,8 @@ def galgje():
      print('Je mag geen cijfers gebruiken!')
      #zorgt ervoor dat er een foutboodschap komt bij invoer van een getal
 
-      
     guesses += guess  
-    #laat de computer onthouden welke letters al zijn geraden 
+    #laat de computer de geraden letter bij de guesses optellen zodat computer kan kijken of die in het woord zit
 
     if ( guess not in word and guess.isalpha()and len(guess) ==1):
       #dus dit gebeurt alleen als de letter niet in het woord zit en dus een letter (en geef cijfer is)
@@ -72,18 +80,17 @@ def galgje():
 
         print('Deze letters zitten niet in het woord:', guessed)
 
-    if turns == 0: 
-            print('Je hebt verloren, jammer joh!') 
-            print("Het woord is: ", word)
-            opnieuw()
-            #verliesbericht voor als beurten op zijn
-
     if len(guess) >1 :
      print('Je mag slechts 1 letter per keer raden!')
      turns -= 1
      print("Je hebt nog maar", + turns, 'beurten!')
      #als de lengte van de invoer langer dan 1 karakter is neemt het aantal beurten met 1 af en wordt er een foutboodschap getoond
 
+    if turns == 0: 
+            print(naam,', je hebt verloren, jammer joh!') 
+            print("Het woord is: ", word)
+            opnieuw()
+            #verliesbericht voor als beurten op zijn
 
 def opnieuw():
  restart = input("Wil je opieuw spelen?").lower()
@@ -98,27 +105,3 @@ def opnieuw():
 
 galgje()
 #laat het spel beginnen
-
-  
-
-    
-         
-
-
-
-    
-            
-    
-
-    
-      
-   
-      
-   
-     
-          
-          
-       
-
-             
-
