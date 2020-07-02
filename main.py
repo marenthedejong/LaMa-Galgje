@@ -15,11 +15,13 @@ def galgje():
   #vraagt om naam/input gebruiker
 
  def printHallo(naam):
-   print('Hallo ' + naam + ', veel succes!')
+   print('Hallo ' + naam + ', veel plezier!')
    #gepersonaliseerde welkomsboodschap
 
  printHallo(naam)
 
+ print('Je mag geen cijfers invoeren en je mag slechts 1 letter tegelijk raden. Als je meer letters tegelijk probeert te raden gaat dit van je beurten af. Je mag door zolang je nog beurten hebt.')
+ #spelregels
  print('Je hebt 5 beurten! Het woord is', + len(word), 'letters lang')
  #geeft weer hoe lang het woord is
 
@@ -55,8 +57,8 @@ def galgje():
         opnieuw()
         #winnaarsbericht en vraag opnieuw te spelen
         
-    guess= input("Raad een letter:")
-    #vraagt om input gebruiker
+    guess= input("Raad een letter:").lower()
+    #vraagt om input gebruiker en zorgt dat het niet uitmaakt of het een grote of kleine letter is die wordt ingevoerd
 
     if guess.isnumeric() == True:
      print('Je mag geen cijfers gebruiken!')
