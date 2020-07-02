@@ -46,13 +46,15 @@ def galgje():
         opnieuw()
         #winnaarsbericht en vraag opnieuw te spelen
         
-    guess = input("Raad een letter:")
-    
+    guess= input("Raad een letter:")
+    #vraagt om input gebruiker
+      
     guesses += guess  
     #laat de computer onthouden welke letters al zijn geraden 
 
-    if guess not in word:
-          
+    if ( guess not in word and guess.isalpha()):
+      #dus dit gebeurt alleen als de letter niet in het woord zit en dus een letter (en geef cijfer is)
+
         turns -= 1
          #aantal beurten neemt met 1 af 
        
@@ -70,7 +72,7 @@ def galgje():
             print("Het woord is: ", word)
             opnieuw()
             #verliesbericht voor als beurten op zijn
-          
+
 def opnieuw():
  restart = input("Wil je opieuw spelen?").lower()
  
@@ -80,7 +82,7 @@ def opnieuw():
  elif restart == 'nee':
    print('Bedankt voor het spelen, tot ziens!')
    exit()
-#functie voor het opnieuw spelen van het spel
+#functie voor het opnieuw spelen van het spel, bij ja gaat het spel opnieuw anders stopt het
 
 galgje()
 #laat het spel beginnen
