@@ -48,6 +48,11 @@ def galgje():
         
     guess= input("Raad een letter:")
     #vraagt om input gebruiker
+
+    if guess.isnumeric() == True:
+     print('Je mag geen cijfers gebruiken!')
+     #zorgt ervoor dat er een foutboodschap komt bij invoer van een getal
+
       
     guesses += guess  
     #laat de computer onthouden welke letters al zijn geraden 
