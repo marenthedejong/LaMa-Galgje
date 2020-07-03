@@ -82,7 +82,7 @@ def galgje():
 
         print('Deze letters zitten niet in het woord:', guessed)
 
-    if len(guess) >1 :
+    if len(guess) >1 and guess.isalpha():
      print('Je mag slechts 1 letter per keer raden!')
      turns -= 1
      print("Je hebt nog maar", + turns, 'beurten!')
