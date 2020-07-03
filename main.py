@@ -65,7 +65,7 @@ def galgje():
      #zorgt ervoor dat er een foutboodschap komt bij invoer van een getal
 
     guesses += guess  
-    #laat de computer de geraden letter bij de guesses optellen zodat computer kan kijken of die in het woord zit
+    #laat de computer de geraden letter bij de guesses opslaan
 
     if ( guess not in word and guess.isalpha()and len(guess) ==1):
       #dus dit gebeurt alleen als de letter niet in het woord zit en dus een letter (en geef cijfer is)
