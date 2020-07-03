@@ -20,7 +20,7 @@ def galgje():
 
  printHallo(naam)
 
- print('Je mag geen cijfers invoeren en je mag slechts 1 letter tegelijk raden. Als je meer letters tegelijk probeert te raden gaat dit van je beurten af. Je mag door zolang je nog beurten hebt.')
+ print('Je mag geen cijfers invoeren en je mag slechts 1 letter tegelijk raden. Als je een cijfer intoetst gaat dit niet van je beurten af, maar als je meer letters tegelijk probeert te raden gaat er wel een beurt af. Je mag door zolang je nog beurten hebt.')
  #spelregels
  print('Je hebt 5 beurten! Het woord is', + len(word), 'letters lang')
  #geeft weer hoe lang het woord is
